@@ -1,6 +1,5 @@
 html {
  box-sizing: border-box;
- font-family: "Lato", sans-serif;
 }
 
 body {
@@ -11,10 +10,14 @@ body {
  background: linear-gradient(to bottom, #434343, #000000);
  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
  color: #ffffff;
- float: right;/* Same width as the sidebar + left position in px */
- font-size: 20px; /* Increased text to enable scrolling */
- margin-right: 2rem;
- padding: 0px 10px;
+}
+.main {
+ margin-left: 460px;
+ /* Same width as the sidebar + left position in px */
+ font-size: 20px;
+ /* Increased text to enable scrolling */
+ margin-right: 1rem;
+ padding: 0px 20px;
 }
 
 a {
@@ -23,15 +26,25 @@ a {
 }
 
 .menu {
- width: auto;
+ background: #67B26F !important;
+ /* fallback for old browsers */
+ background: -webkit-linear-gradient(to right, #4ca2cd, #67B26F) !important;
+ /* Chrome 10-25, Safari 5.1-6 */
+ background: linear-gradient(to right, #4ca2cd, #67B26F) !important;
+ /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+ width: 450px;
  height: 100%;
  position: fixed;
  z-index: 1;
  top: 0;
  left: 0;
- background: #000;
  overflow-x: hidden;
  padding: 8px 10px;
+}
+
+.menu ol,
+.menu li {
+ list-style-type: none;
 }
 
 .menu a {
@@ -42,6 +55,40 @@ a {
  display: block;
 
 }
+
 .menu a:hover {
- color: #064579;
+ color: pink;
+}
+
+.link-wyksztalcenie {
+ color: green !important;
+ text-transform: uppercase;
+}
+
+.lista-gier .tytul-lista {
+ list-style-type: upper-roman !important;
+ text-transform: initial;
+}
+
+hr.style18 {
+ height: 30px;
+ border-style: solid;
+ border-color: orange;
+ border-width: 1px 0 0 0;
+ border-radius: 20px;
+}
+
+hr.style18:before {
+ display: block;
+ content: "";
+ height: 30px;
+ margin-top: -31px;
+ border-style: solid;
+ border-color: orangered;
+ border-width: 0 0 1px 0;
+ border-radius: 20px;
+}
+
+.producent {
+ text-transform: capitalize !important;
 }
