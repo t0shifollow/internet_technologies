@@ -1,10 +1,8 @@
 body {
- /* Set "section" to 0 */
  counter-reset: section;
 }
 
 h2 {
- /* Set "subsection" to 0 */
  counter-reset: subsection;
 }
 
