@@ -17,3 +17,18 @@ h3::before {
  counter-increment: subsection;
  content: counter(section) "." counter(subsection) " ";
 }
+
+figcaption:before {
+ content: "Rysunek " counter(section) ". ";
+}
+
+.theorem:before {
+ font-weight: bold;
+ content: "Twierdzenie " counter(section) "." counter(subsection) ". ";
+}
+
+.definition:before {
+ font-weight: bold;
+ content: "Definicja " counter(section) "." counter(subsection) ". ";
+
+}
