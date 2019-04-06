@@ -1,0 +1,28 @@
+table {
+ width: 100%;
+ border: 1px solid black;
+ border-collapse: collapse;
+}
+
+th,
+td {
+ text-align: right;
+ padding-left: 1rem;
+ padding-right: 1rem;
+}
+
+tr:nth-child(2n+1) {
+ background-color: #f2f2f2
+}
+
+th {
+ background-color: #ffffff;
+ color: black;
+ border-bottom: 1px solid black;
+ text-align: center !important;
+}
+
+td:nth-child(1),
+td:nth-child(2) {
+ text-align: left;
+}
