@@ -1,0 +1,32 @@
+h1 {
+    font-weight: bolder;
+}
+
+h2 {
+    font-weight: bolder;
+    margin-top: 10px;
+    background-color: darkgrey;
+}
+
+h2 time {
+    color: grey;
+    font-size: 0.85em;
+    float: right;
+}
+
+p {
+    padding: 10px;
+    overflow: hidden;
+}
+
+img {
+    float: left;
+}
+
+article {
+    overflow: hidden;
+}
+
+article:nth-of-type(1) {
+    margin-bottom: 10px
+}

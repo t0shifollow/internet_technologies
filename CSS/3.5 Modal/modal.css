@@ -1,0 +1,16 @@
+#box {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(26, 168, 175, 0.3) center fixed;
+    width: 100%;
+    height: 100%;
+}
+
+#box button {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}

@@ -1,0 +1,33 @@
+li {
+    list-style-type: none;
+}
+
+.open > .icon {
+    background: url('icons.png') left no-repeat;
+    height: 14px;
+    width: 13px;
+    display: inline-flex;
+}
+
+.closed .icon {
+    background: url('icons.png') left top no-repeat;
+    height: 14px;
+    width: 13px;
+    display: inline-flex;
+}
+
+.leaf .icon {
+    background: url('icons.png') left bottom no-repeat;
+    height: 15px;
+    width: 13px;
+    display: inline-flex;
+}
+
+div.text {
+    width: 355px;
+    display: inline-flex;
+}
+
+.icon:hover {
+    cursor: pointer;
+}
