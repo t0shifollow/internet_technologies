@@ -1,3 +1,24 @@
+// LESS
+// start color
+@start-color: #FFC7C7;
+
+@lighten-percentage: 5%;
+@lighten-more-percentage: 8%;
+@darken-percentage: 80%;
+@saturate-percentage: 15%;
+@desaturate-percentage: 50%;
+
+// media less code
+// break points
+@wide-screen-down: ~'(max-width: 1199px)';
+@desktop-down: ~'(max-width: 991px)';
+@tablet-down: ~'(max-width: 767px)';
+@phone-down: ~'(max-width: 480px)';
+@small-phone-down: ~'(max-width: 320px)';
+
+
+
+// main document component stylish 
 html {
  box-sizing: border-box;
 }
@@ -11,15 +32,6 @@ html {
 body {
  margin: 0;
 }
-
-// Start Color
-@start-color: #FFC7C7;
-
-@lighten-percentage: 5%;
-@lighten-more-percentage: 8%;
-@darken-percentage: 80%;
-@saturate-percentage: 15%;
-@desaturate-percentage: 50%;
 
 // atribute
 a {
@@ -58,6 +70,14 @@ nav li a {
 nav li a:hover {
  background-image: url(images/bg_nav_h.png);
  background-size: cover;
+}
+
+ul:nth-child(2) {
+ list-style-image: url('images/bullet.png');
+}
+
+ul:nth-child(2) li {
+ padding: 0.5rem 0 1rem;
 }
 
 // contentet id style
@@ -110,10 +130,5 @@ nav li a:hover {
  padding: 0;
 }
 
-ul:nth-child(2) {
- list-style-image: url('images/bullet.png');
-}
+// media less
 
-ul:nth-child(2) li {
- padding: 0.5rem 0 1rem;
-}
