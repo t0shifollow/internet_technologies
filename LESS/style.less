@@ -1,0 +1,119 @@
+html {
+ box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+ box-sizing: inherit;
+}
+
+body {
+ margin: 0;
+}
+
+// Start Color
+@start-color: #FFC7C7;
+
+@lighten-percentage: 5%;
+@lighten-more-percentage: 8%;
+@darken-percentage: 80%;
+@saturate-percentage: 15%;
+@desaturate-percentage: 50%;
+
+// atribute
+a {
+ color: darken(@start-color, @darken-percentage);
+}
+
+header {
+ text-align: center;
+ padding: 2rem 2.5rem 2rem 0;
+ background: @start-color;
+}
+
+nav ul {
+ list-style-type: none;
+ margin: 0;
+ padding: 0;
+ overflow: hidden;
+ background-image: url(images/bg_nav.png);
+ background-size: contain;
+}
+
+nav li {
+ float: left;
+}
+
+nav li a {
+ display: block;
+ color: white;
+ text-align: center;
+ font-family: Helvetica Neue,Helvetica,Arial,sans-serif; 
+ font-weight: 600;
+ padding: 1.5rem;
+ text-decoration: none;
+}
+
+nav li a:hover {
+ background-image: url(images/bg_nav_h.png);
+ background-size: cover;
+}
+
+// contentet id style
+#container {
+ width: 100%;
+ margin: 0 auto;
+ display: inline-block;
+ background: lighten(@start-color, @lighten-percentage)
+}
+
+#main {
+ display: inline-block;
+ width: 45%;
+ height: 100%;
+ padding-right: 3rem;
+ padding-left: 1rem;
+ background: lighten(@start-color, @lighten-more-percentage);
+}
+
+#left {
+ float: left;
+ width: 25%;
+ height: 100vh;
+ padding-right: 1rem;
+ padding-left: 1rem; 
+ background: lighten(@start-color, @lighten-percentage)
+}
+
+#important {
+ float: right;
+ width: 30%;
+ height: 100vh;
+ padding-right: 1rem;
+ padding-left: 1rem; 
+ background: lighten(@start-color, @lighten-percentage)
+}
+
+#copyright {
+ clear: both;
+ height: 100%;
+ width: 100%;
+ text-align: center;
+ background: @start-color;
+ margin: 0;
+ padding: 1rem;;
+}
+
+#copyright p {
+ margin: 0;
+ padding: 0;
+}
+
+ul:nth-child(2) {
+ list-style-image: url('images/bullet.png');
+}
+
+ul:nth-child(2) li {
+ padding: 0.5rem 0 1rem;
+}
