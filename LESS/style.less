@@ -10,134 +10,181 @@
 
 // media less code
 // break points
-@desktop-down: ~'(max-width: 800px)';
-@tablet-down: ~'(min-width: 600px)';
 
 
 
 // main document component stylish 
 html {
- box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 *,
 *:before,
 *:after {
- box-sizing: inherit;
+    box-sizing: inherit;
 }
 
 body {
- margin: 0;
+    margin: 0;
 }
 
 // atribute
 a {
- color: darken(@start-color, @darken-percentage);
+    color: darken(@start-color, @darken-percentage);
 }
 
 header {
- text-align: center;
- padding: 2rem 2.5rem 2rem 0;
- background: @start-color;
+    text-align: center;
+    grid-area: header;
+    padding: 2rem 2.5rem 2rem 0;
+    background: @start-color;
 }
 
 nav ul {
- list-style-type: none;
- margin: 0;
- padding: 0;
- overflow: hidden;
- background-image: url(images/bg_nav.png);
- background-size: contain;
- @tablet-down {
-		display: none;
- }
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    grid-area: nav;
+    overflow: hidden;
+    background-image: url(images/bg_nav.png);
+    background-size: contain;
 }
 
 nav li {
- float: left;
- @tablet-down {
-  text-align: center;
-  display:block;
-  float:left;
-  width: 100%; // adjust
-  height:150px; // adjust
-  padding: 5px; //adjust
-
- }
+    float: left;
+    border: black 1px solid;
 }
 
 nav li a {
- display: block;
- color: white;
- text-align: center;
- font-family: Helvetica Neue,Helvetica,Arial,sans-serif; 
- font-weight: 600;
- padding: 1.5rem;
- text-decoration: none;
+    display: block;
+    color: white;
+    text-align: center;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-weight: 500;
+    padding: 1rem;
+    text-decoration: none;
 }
 
 nav li a:hover {
- background-image: url(images/bg_nav_h.png);
- background-size: cover;
+    background-image: url(images/bg_nav_h.png);
+    background-size: cover;
 }
 
 ul:nth-child(2) {
- list-style-image: url('images/bullet.png');
+    list-style-image: url('images/bullet.png');
 }
 
 ul:nth-child(2) li {
- padding: 0.5rem 0 1rem;
+    padding: 0.5rem 0 1rem;
 }
 
 // contentet id style
 #container {
- width: 100%;
- margin: 0 auto;
- display: inline-block;
- background: lighten(@start-color, @lighten-percentage)
+
+    margin: 0 auto;
+    display: inline-block;
+    background: lighten(@start-color, @lighten-percentage)
 }
 
 #main {
- display: inline-block;
- width: 45%;
- height: 100%;
- padding-right: 3rem;
- padding-left: 1rem;
- background: lighten(@start-color, @lighten-more-percentage);
+
+    grid-area: main;
+    padding-right: 3rem;
+    padding-left: 1rem;
+    background: lighten(@start-color, @lighten-more-percentage);
 }
 
 #left {
- float: left;
- width: 25%;
- height: 100vh;
- padding-right: 1rem;
- padding-left: 1rem; 
- background: lighten(@start-color, @lighten-percentage)
+
+    grid-area: left;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    background: lighten(@start-color, @lighten-percentage)
 }
 
 #important {
- float: right;
- width: 30%;
- height: 100vh;
- padding-right: 1rem;
- padding-left: 1rem; 
- background: lighten(@start-color, @lighten-percentage)
+
+    grid-area: important;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    background: lighten(@start-color, @lighten-percentage)
 }
 
 #copyright {
- clear: both;
- height: 100%;
- width: 100%;
- text-align: center;
- background: @start-color;
- margin: 0;
- padding: 1rem;;
+    clear: both;
+
+    text-align: center;
+    background: @start-color;
+    margin: 0;
+    padding: 1rem;
 }
 
 #copyright p {
- margin: 0;
- padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
-// media less
+// grid
+footer {
+    grid-area: footer;
+}
 
+nav {
+    grid-area: nav;
+}
+
+div#container {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "header header header header"
+        "nav nav nav nav"
+        "left main main important"
+        "footer footer footer footer";
+
+    @media all and (max-width: 800px) {
+        grid-template-columns: 55% 45%;
+        grid-template-areas:
+            "header header"
+            "nav nav"
+            "main main"
+            "left important"
+            "footer footer";
+
+            nav li a {
+                padding: 1rem;
+                font-size: 15px;
+            }
+
+    }
+
+
+    @media all and (max-width:600px) {
+        grid-template: none;
+        grid-template-areas:
+            "header"
+            "nav"
+            "main"
+            "left"
+            "important"
+            "footer";
+
+        nav li {
+            text-align: center;
+            display: block;
+            width: 100%; // adjust
+        }
+
+        nav li a {
+            padding: 1rem;
+            background-image: url(./images/bg_nav.png);
+            background-size: contain;
+        }
+
+        nav li a:hover {
+            background-image: url(./images/bg_nav_h.png);
+            background-size: contain;
+        }
+    }
+}
