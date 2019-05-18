@@ -10,11 +10,11 @@
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.10.1",
+    "ejs": "^2.3.1",
     "express": "^4.11.0",
     "morgan": "^1.5.1",
-    "taffy": "^2.6.2",
     "serve-favicon": "^2.2.0",
-    "ejs": "^2.3.1"
+    "taffy": "^2.6.2"
   },
   "devDependencies": {
     "grunt": "0.4.5",
