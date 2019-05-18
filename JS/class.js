@@ -1,10 +1,8 @@
-'use strict'
-
-function switchClassName(obj, word) {
-
- if (obj.className==this.word) {
-  return delete obj.className.word;
+function switchClassName(obj, name) {
+ if (obj.className.includes(name)) {
+  obj.className = obj.className.replace(' ' + name, '');
+  obj.className = obj.className.replace(name + ' ', '');
  } else {
-  return obj.className.push({word});
+  obj.className += ' ' + name;
  }
 }
