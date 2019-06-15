@@ -12,6 +12,9 @@ io.sockets.on("connection", function (socket) {
     socket.on("message", function (data) {
         io.sockets.emit("echo", "No tak, tak – dostałem: " + data);
     });
+    socket.on("nick", function (cos) {
+        io.sockets.emit("echo", cos);
+    })
     socket.on("error", function (err) {
         console.dir(err);
     });

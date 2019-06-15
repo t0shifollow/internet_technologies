@@ -11,6 +11,7 @@
     <form>
       <span>
         <img id="status" src="img/bullet_red.png" width="35" />
+        <input id="nick" type="text" placeholder="nick">
         <input id="open" type="button" value="Połącz" />
         <input id="close" type="button" value="Rozłącz" />
       </span>
@@ -18,8 +19,10 @@
     <p>
       Komunikat:&nbsp;
       <input id="text">&nbsp;<input id="send" type="button" value="Wyślij">
-    </p>
+      <br>
+    </span>
     <p id="message"></p>
+    <span id="typingUser"></span>
   </div>
   <script src="/socket.io/socket.io.js"></script>
   <script src="/js/skrypt.js"></script>
