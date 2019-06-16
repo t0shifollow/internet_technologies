@@ -48,14 +48,14 @@ document.addEventListener("DOMContentLoaded", function (event) {
                 data + '</p>';
         });
         socket.on('loggedIn', function (data) {
-            message.innerHTML = message.innerHTML + '<p>Zalogował się: ' + data + '</p>';
+            message.innerHTML = message.innerHTML + '<p>Kto jest z nami?: ' + data + '</p>';
         });
         socket.on('loggedOut', function (data) {
-            message.innerHTML = message.innerHTML + '<p>Wylogował się: ' + data + '</p>';
+            message.innerHTML = message.innerHTML + '<p>Kto się uciekł?: ' + data + '</p>';
         });
         socket.on('userWriting', function (isUserTyping, nick) {
             if (isUserTyping) {
-                typingUser.innerText = nick + ' pisze wiadomość..'
+                typingUser.innerText = nick + ' drukuje coś..'
             } else {
                 typingUser.innerText = '';
             }
